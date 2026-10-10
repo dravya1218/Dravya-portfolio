@@ -400,6 +400,33 @@ body {
 }
 
 @media (max-width: 600px) {
+
+  body {
+    background-color: #0a192f;
+    background-image:
+    radial-gradient(
+      ellipse 75% 420px at 100% 12%,
+      rgba(100, 255, 218, 0.07),
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 70% 500px at 100% 55%,
+      rgba(100, 255, 218, 0.09),
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 75% 420px at 100% 92%,
+      rgba(100, 255, 218, 0.06),
+      transparent 100%
+    );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  .mouse-glow {
+    display: none;
+  }
+  
   .sidebar {
     position: relative;
     width: 100%;
@@ -409,5 +436,28 @@ body {
   .main-content {
     width: 100%;
     margin-left: 0;
+  }
+
+  .main-content section > h2 {
+    width: calc(100% + 50px);
+    margin-left: -25px;
+    padding: 16px 25px;
+    background: rgba(10, 25, 47, 0.98);
+    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);
+  }
+}
+
+/* Stationary glow for touch-only tablets */
+@media (min-width: 601px) and (max-width: 900px) and (hover: none) {
+  body {
+    background-color: #0a192f;
+    background-image:
+      radial-gradient(
+        ellipse 80% 500px at 100% 35%,
+        rgba(100, 255, 218, 0.07),
+        transparent 100%
+      );
+    background-attachment: fixed;
   }
 }
