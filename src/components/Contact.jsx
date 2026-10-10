@@ -1,3 +1,4 @@
+import { handleEmailClick, MAILTO_HREF } from '../email'
 
 function Contact() {
   return (
@@ -15,11 +16,7 @@ function Contact() {
       </p>
 
       <div className="contact-links">
-        <a
-          href="https://mail.google.com/mail/?view=cm&to=dravyavasava28@gmail.com"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href={MAILTO_HREF} onClick={handleEmailClick}>
           Email
         </a>
 
@@ -28,7 +25,7 @@ function Contact() {
         <a
           href="https://wa.me/919925003684"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           WhatsApp
         </a>
@@ -36,7 +33,7 @@ function Contact() {
         <a
           href="https://github.com/dravya1218"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           GitHub
         </a>
@@ -44,7 +41,7 @@ function Contact() {
         <a
           href="https://www.linkedin.com/in/dravya-vasava-8396362a6/"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           LinkedIn
         </a>
@@ -52,8 +49,7 @@ function Contact() {
         <a
           href="https://www.instagram.com/dravya___/"
           target="_blank"
-          rel="noreferrer"
-
+          rel="noopener noreferrer"
         >
           Instagram
         </a>

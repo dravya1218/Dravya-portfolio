@@ -7,6 +7,7 @@ import {
   FaEnvelope,
   FaPhone
 } from 'react-icons/fa'
+import { handleEmailClick, MAILTO_HREF } from '../email'
 
 function Navbar() {
   const [activeSection, setActiveSection] = useState('about')
@@ -101,7 +102,7 @@ function Navbar() {
         <a
           href="https://github.com/dravya1218"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           aria-label="GitHub"
         >
           <FaGithub />
@@ -110,16 +111,15 @@ function Navbar() {
         <a
           href="https://www.linkedin.com/in/dravya-vasava-8396362a6/"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           aria-label="LinkedIn"
         >
           <FaLinkedin />
         </a>
 
         <a
-          href="https://mail.google.com/mail/?view=cm&to=dravyavasava28@gmail.com"
-          target="_blank"
-          rel="noreferrer"
+          href={MAILTO_HREF}
+          onClick={handleEmailClick}
           aria-label="Email"
         >
           <FaEnvelope />
@@ -128,7 +128,7 @@ function Navbar() {
         <a
           href="https://www.instagram.com/dravya___/"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           aria-label="Instagram"
         >
           <FaInstagram />
@@ -137,7 +137,7 @@ function Navbar() {
         <a
           href="https://wa.me/919925003684"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           aria-label="WhatsApp"
         >
           <FaWhatsapp />
