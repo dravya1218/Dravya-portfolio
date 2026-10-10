@@ -15,6 +15,9 @@ function ProjectCard(props) {
         <a href={props.live} target="_blank" rel="noreferrer">
           Live Demo
         </a>
+        <p className="demo-notice">
+          First visit may take up to a minute to start.
+        </p>     
       </div>
     </article>
   )
